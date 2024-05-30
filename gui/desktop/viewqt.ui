@@ -83,6 +83,11 @@ border-left-width: 0px;
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-size: 15px;
+}</string>
+     </property>
      <property name="text">
       <string>level</string>
      </property>
@@ -95,6 +100,11 @@ border-left-width: 0px;
        <width>71</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-size: 15px;
+}</string>
      </property>
      <property name="text">
       <string>score</string>
@@ -109,6 +119,11 @@ border-left-width: 0px;
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-size: 15px;
+}</string>
+     </property>
      <property name="text">
       <string>Speed</string>
      </property>
@@ -121,6 +136,11 @@ border-left-width: 0px;
        <width>71</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-size: 15px;
+}</string>
      </property>
      <property name="text">
       <string>HiScore</string>
@@ -199,18 +219,19 @@ border-left-width: 0px;
       <rect>
        <x>60</x>
        <y>190</y>
-       <width>161</width>
+       <width>211</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>-1</pointsize>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
 border: none;
+font-size: 17px;
 }</string>
      </property>
      <property name="text">

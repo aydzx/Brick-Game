@@ -203,7 +203,8 @@ int checkLine(GameInfo_t* data) {
   int x = 0;
   int Score = 0;
   for (int y = 0; y < HEIGHT; y++) {
-    for (x = 0; x < WIDTH && data->field[y][x]; x++);
+    for (x = 0; x < WIDTH && data->field[y][x]; x++)
+      ;
     if (x == 10) {
       removeLine(data, y);
       Score = Score * 2 + 100;

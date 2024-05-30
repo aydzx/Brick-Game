@@ -17,10 +17,7 @@ else
 MV = mv desk/viewqt.app/Contents/MacOS/viewqt build/BrickGameDesktop
 endif
 
-
-
-
-install: cli des
+install: clean cli des
 
 uninstall:
 	rm -rf build 
@@ -58,9 +55,8 @@ dist:
 	tar cvzf brick_game_dist.tgz dist
 	rm -rf dist
 
-
 clean:
-	rm -rf build lib obj  *.gcda *.gcno *.gcov *.gcovm *.gcovr backtest *.html *.css
+	rm -rf build lib obj  *.gcda *.gcno *.gcov *.gcovm *.gcovr backtest *.html *.css desk gui/build*
 
 s21_tetris.a: lib_dir obj_dir
 	$(GCC) $(CPPFLAGS) -c $(SOURCES_TETRIS) -o $(OBJ_DIR)/s21_tetris.o
@@ -70,7 +66,6 @@ s21_snake.a: lib_dir obj_dir
 	$(GCC) $(CPPFLAGS) -c $(SOURCES_SNAKE) -o $(OBJ_DIR)/s21_snake.o
 	ar rcs $(LIB_DIR)/s21_snake.a $(OBJ_DIR)/s21_snake.o
 
-
 lib_dir:
 	mkdir -p $(LIB_DIR)
 
@@ -79,3 +74,6 @@ build_dir:
 
 obj_dir:
 	mkdir -p $(OBJ_DIR)
+
+clang:
+	clang-format --style=google -i /brick_game/
