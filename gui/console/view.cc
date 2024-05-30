@@ -1,13 +1,13 @@
 #include "view.h"
 
-void printGameField(WindowGame* gameWindow, GameInfo_t* data, GameState state) {
+void printGameField(WindowGame* gameWindow,GameInfo_t* data, GameState state) {
   werase(gameWindow->GameWindow);
   werase(gameWindow->NextFigure);
   werase(gameWindow->GameScore);
   box(gameWindow->NextFigure, 0, 0);
   box(gameWindow->GameScore, 0, 0);
   printInfo(gameWindow->GameScore, data);
-  if (state != MENU && state != GAME_OVER) {
+  if (state != MENU && state != GAME_OVER ) {
     printNextFigure(gameWindow->NextFigure, data);
     printField(gameWindow->GameWindow, data);
   } else if (state == MENU) {
@@ -77,7 +77,8 @@ void printNextFigure(WINDOW* NextFigure, GameInfo_t* data) {
     mvwaddch(NextFigure, data->next.pixels[y].y + OFFSET_Y_NEXT_SHAPE,
              data->next.pixels[y].x * 2 - OFFSET_Y_NEXT_SHAPE, BLOCK);
     mvwaddch(NextFigure, data->next.pixels[y].y + OFFSET_Y_NEXT_SHAPE,
-             data->next.pixels[y].x * 2 - OFFSET_Y_NEXT_SHAPE + 1, BLOCK);
+             data->next.pixels[y].x * 2 - OFFSET_Y_NEXT_SHAPE + 1,
+             BLOCK);
     wattroff(NextFigure, COLOR_PAIR(data->next.color));
   }
 }
@@ -87,8 +88,8 @@ void printField(WINDOW* GameWindow, GameInfo_t* data) {
     for (int x = 0; x < WIDTH; x++) {
       if (data->field[y][x]) {
         wattron(GameWindow, COLOR_PAIR(data->field[y][x]));
-        mvwaddch(GameWindow, y - OFFSET_Y, x * 2, BLOCK);
-        mvwaddch(GameWindow, y - OFFSET_Y, x * 2 + 1, BLOCK);
+        mvwaddch(GameWindow, y - OFFSET_Y , x * 2, BLOCK);
+        mvwaddch(GameWindow, y - OFFSET_Y , x * 2 + 1, BLOCK);
         wattroff(GameWindow, COLOR_PAIR(data->field[y][x]));
       }
     }
@@ -129,10 +130,11 @@ void printPause(WINDOW* GameScore) {
   wattroff(GameScore, COLOR_PAIR(1));
 }
 
+
 double wtime() {
   double result = 0.0;
 #ifdef CLOCK_MONOTONIC
-  struct timespec ts = {.tv_sec = 0, .tv_nsec = 0};
+  struct timespec ts = {.tv_sec = 0,.tv_nsec = 0  };
   clock_gettime(CLOCK_MONOTONIC, &ts);
   result = ts.tv_sec + (double)ts.tv_nsec * 1E-9;
 #else
@@ -152,32 +154,33 @@ double getCpuTime(double* lastIterMoment, double* currIterMoment) {
   return CpuTime;
 }
 
+
 int chooseGame(WindowGame* gameWindow) {
   int colorSnake = 7;
   int colorTetris = 1;
   int choose = 1;
-  int ch = 0;
-  while (ch != '\n') {
+  int ch = 0 ;
+  while( ch != '\n') {
     ch = getch();
-    mvwprintw(gameWindow->GameWindow, 5, 2, "Choose a game ");
-    wattron(gameWindow->GameWindow, COLOR_PAIR(colorTetris));
-    mvwprintw(gameWindow->GameWindow, 7, 2, "TETRIS");
-    wattroff(gameWindow->GameWindow, COLOR_PAIR(colorTetris));
-    wattron(gameWindow->GameWindow, COLOR_PAIR(colorSnake));
-    mvwprintw(gameWindow->GameWindow, 9, 2, "SNAKE");
-    wattroff(gameWindow->GameWindow, COLOR_PAIR(colorSnake));
-    wrefresh(gameWindow->GameBorder);
-    wrefresh(gameWindow->GameScore);
-    wrefresh(gameWindow->GameWindow);
-    wrefresh(gameWindow->NextFigure);
-    if (choose == 1) {
-      if (ch == KEY_DOWN) {
+     mvwprintw(gameWindow->GameWindow, 5, 2, "Choose a game ");
+     wattron(gameWindow->GameWindow, COLOR_PAIR(colorTetris));
+     mvwprintw(gameWindow->GameWindow, 7, 2, "TETRIS");
+     wattroff(gameWindow->GameWindow, COLOR_PAIR(colorTetris));
+     wattron(gameWindow->GameWindow, COLOR_PAIR(colorSnake));
+     mvwprintw(gameWindow->GameWindow, 9, 2, "SNAKE");
+     wattroff(gameWindow->GameWindow, COLOR_PAIR(colorSnake));
+     wrefresh(gameWindow->GameBorder);
+      wrefresh(gameWindow->GameScore);
+      wrefresh(gameWindow->GameWindow);
+      wrefresh(gameWindow->NextFigure);
+    if(choose == 1) {
+      if(ch == KEY_DOWN) {
         choose = 2;
         colorSnake = 1;
         colorTetris = 7;
-      }
-    } else if (choose == 2) {
-      if (ch == KEY_UP) {
+      }   
+    }else if(choose == 2) {
+      if(ch == KEY_UP) {
         choose = 1;
         colorSnake = 7;
         colorTetris = 1;
@@ -185,5 +188,5 @@ int chooseGame(WindowGame* gameWindow) {
     }
   }
 
-  return choose;
+  return  choose;
 }

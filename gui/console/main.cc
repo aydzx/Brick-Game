@@ -1,6 +1,6 @@
 
-#include "../../brick_game/snake/model.h"
-#include "../../brick_game/tetris/library/tetris.h"
+#include "../../brick_game/library/model.h"
+#include "../../brick_game/library/tetris.h"
 #include "controller/controller.h"
 #include "view.h"
 
@@ -20,15 +20,12 @@ int main() {
     if (numberGame == 2) {
       model = new s21::Model;
       info = model->getInfo();
-      info->state = GameState::MENU;
-      info->action = UserAction_t::RIGHT;
     } else {
       info = getAllInfo();
       info->state = GameState::MENU;
     }
     while (info->state != EXIT_STATE) {
       double CpuTime = getCpuTime(&lastIterMoment, &currIterMoment);
-
       handleInput(info);
       if (CpuTime > threshold) {
         lastIterMoment = currIterMoment;
@@ -41,7 +38,7 @@ int main() {
       }
     }
     if (numberGame == 1) {
-      writeMaxScore(info->score);
+      writeMaxScore(info->high_score);
     }
   }
 

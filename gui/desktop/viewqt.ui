@@ -197,22 +197,20 @@ border-left-width: 0px;
     <widget class="QLabel" name="Menu">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>60</x>
        <y>190</y>
-       <width>271</width>
+       <width>161</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>-1</pointsize>
+       <pointsize>18</pointsize>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel {
 border: none;
-font-size: 17px;
-text-align: center;
 }</string>
      </property>
      <property name="text">

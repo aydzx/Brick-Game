@@ -1,9 +1,11 @@
 #ifndef OBJECTS_H
 #define OBJECTS_H
 
+
 #include "defines.h"
 
 /// @brief Enumeration of shape types
+
 
 /// @brief Enumeration action key from user
 typedef enum {
@@ -18,7 +20,7 @@ typedef enum {
   ACTION
 } UserAction_t;
 
-/// @brief Coordinates of the shape
+/// @brief Coordinates of the shape 
 typedef struct {
   int y;
   int x;
@@ -47,7 +49,7 @@ typedef enum {
 /// @brief Data about the playing field, speed score and next figure
 typedef struct {
   int field[HEIGHT][WIDTH];
-  Figure next;
+  Figure next;  
   int score;
   int high_score;
   int level;

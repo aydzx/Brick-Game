@@ -1,6 +1,7 @@
 #ifndef DEFINES_H
 #define DEFINES_H
 
+
 #define MAX_WIDTH 10
 #define MAX_HEIGHT 20
 #define SNAKE_START_LENGTH 4

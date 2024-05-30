@@ -1,4 +1,4 @@
-#include "model.h"
+#include "../library/model.h"
 
 void s21::Model::updateCurrentState() {
   preliminaryDataCheck();
@@ -50,7 +50,6 @@ void s21::Model::initGame() {
 void s21::Model::initData() {
   placeholderForNext();  // заглушка для next
   initSnake();
-  // generateFoodWithoutCollision();
   readFromFile();
   clearField();
   placeSnakeToField();
@@ -79,11 +78,9 @@ void s21::Model::spawnFood() {
 }
 
 void s21::Model::moving() {
-  // clearField();
   clearSnakeFromField();
   updateData();
   placeSnakeToField();
-  // placeFoodToField();
 }
 void s21::Model::updateData() {
   std::pair<int, int> newPix = snake[0];
@@ -258,7 +255,7 @@ void s21::Model::gameOver() {
     game_info_.state = SPAWN;
   }
 }
-s21::Model::Model() { game_info_.state = GameState::STOP; }
+s21::Model::Model() { game_info_.state = MENU; }
 
 s21::Model::~Model() { writeToFile(); }
 

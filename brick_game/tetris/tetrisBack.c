@@ -1,4 +1,4 @@
-#include "library/tetris.h"
+#include "../library/tetris.h"
 
 void updateCurrentState(GameInfo_t* data) {
   if (data->state == SHIFTING && data->state != STOP) {

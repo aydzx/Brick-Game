@@ -11,8 +11,8 @@ GCC = g++
 FLAGS=-lgtest
 OS=$(shell uname -s)
 ifeq ($(OS), Linux)
-FLAGS+=-pthread
 MV = mv desk/viewqt build/BrickGameDesktop && ./build/BrickGameDesktop
+FLAGS+=-pthread
 else
 MV = mv desk/viewqt.app/Contents/MacOS/viewqt build/BrickGameDesktop
 endif
@@ -20,7 +20,10 @@ endif
 
 
 
-install: clean cli des
+install: cli des
+
+uninstall:
+	rm -rf build 
 
 dvi:
 	doxygen doxygen/Doxyfile
@@ -37,6 +40,7 @@ des: build_dir
 	cd desk && qmake ../gui/desktop
 	cd desk && make 
 	$(MV)
+	rm -rf desk
 
 test:
 	$(GCC) $(CPPFLAGS) --coverage brick_game/snake/model.cc test_back/tests.cc -o backtest $(FLAGS)
@@ -56,7 +60,7 @@ dist:
 
 
 clean:
-	rm -rf build lib obj desk *.gcda *.gcno *.gcov *.gcovm *.gcovr backtest *.html *.css
+	rm -rf build lib obj  *.gcda *.gcno *.gcov *.gcovm *.gcovr backtest *.html *.css
 
 s21_tetris.a: lib_dir obj_dir
 	$(GCC) $(CPPFLAGS) -c $(SOURCES_TETRIS) -o $(OBJ_DIR)/s21_tetris.o
