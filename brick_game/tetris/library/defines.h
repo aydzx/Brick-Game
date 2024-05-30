@@ -1,0 +1,42 @@
+#ifndef DEFINES_H
+#define DEFINES_H
+
+
+#define MAX_WIDTH 10
+#define MAX_HEIGHT 20
+#define SNAKE_START_LENGTH 4
+#define WIDTH 10
+#define HEIGHT 24
+#define HEIGHT_WINDOWS_GAME 20
+#define WIDTH_WINDOWS_GAME 20
+#define X_WINDOWS_GAME 1
+#define Y_WINDOWS_GAME 1
+#define HEIGHT_WINDOWS_NEXT 8
+#define WIDTH_WINDOWS_NEXT 17
+#define HEIGHT_WINDOWS_INFO 14
+#define WIDTH_WINDOWS_INFO 17
+#define X_WINDOWS_INFO 22
+#define Y_WINDOWS_INFO 8
+#define HEIGHT_BORDER 22
+#define WIDTH_BORDER 22
+#define STARTING_COORDINATE 0
+#define OFFSET_Y 3
+#define OFFSET_Y_NEXT_SHAPE 2
+#define BLOCK ' ' | A_REVERSE
+#define MAXFPS 10
+#define MAXLEVEL 10
+#define MAX_SCORE_SNAKE 200
+#define COUNT_ITERATION 30
+#define PIXEL 30
+/* colors */
+#define COLOR_BLACK 0
+#define COLOR_RED 1
+#define COLOR_GREEN 2
+#define COLOR_YELLOW 3
+#define COLOR_BLUE 4
+#define COLOR_MAGENTA 5
+#define COLOR_CYAN 6
+#define COLOR_WHITE 7
+#define NUMBER_OF_FIGURES 7
+
+#endif

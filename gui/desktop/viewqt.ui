@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewQt</class>
+ <widget class="QWidget" name="ViewQt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>ViewQt</string>
+  </property>
+  <widget class="QWidget" name="GameField" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>491</width>
+     <height>602</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    border: 2px solid black;
+}</string>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>-1</y>
+      <width>211</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+border-left-width: 0px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>220</y>
+      <width>191</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame_2 {
+    border-left-width: 0px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_lv">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>level</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_score">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>score</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Speed">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Speed</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_HiScore">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>HiScore</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lable_value_lv">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>58</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lable_value_score">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>58</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lable_value_speed">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>58</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lable_value_HiScore">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>220</y>
+       <width>58</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>301</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="Menu">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>271</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+border: none;
+font-size: 17px;
+text-align: center;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
