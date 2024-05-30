@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['checkcollision_9',['checkCollision',['../tetrisBack_8h.html#a23bffcfe8feb5b684445fa031332dd56',1,'checkCollision(Figure *figure, GameInfo_t *GameField):&#160;tetrisBack.c'],['../tetrisBack_8c.html#a23bffcfe8feb5b684445fa031332dd56',1,'checkCollision(Figure *figure, GameInfo_t *GameField):&#160;tetrisBack.c']]],
+  ['checkcollisiondown_10',['checkCollisionDown',['../tetrisBack_8h.html#a2c53460da389e23bc45c0707ec3c6150',1,'checkCollisionDown(GameInfo_t *data):&#160;tetrisBack.c'],['../tetrisBack_8c.html#a2c53460da389e23bc45c0707ec3c6150',1,'checkCollisionDown(GameInfo_t *data):&#160;tetrisBack.c']]],
+  ['checkingtopline_11',['checkingTopLine',['../tetrisBack_8h.html#a201737a5661ecce52321d042c6c169bd',1,'checkingTopLine(GameInfo_t *data):&#160;tetrisBack.c'],['../tetrisBack_8c.html#a201737a5661ecce52321d042c6c169bd',1,'checkingTopLine(GameInfo_t *data):&#160;tetrisBack.c']]],
+  ['checkline_12',['checkLine',['../tetrisBack_8h.html#a290357fd08dfcd5dba53b47bc4592a2f',1,'checkLine(GameInfo_t *data):&#160;tetrisBack.c'],['../tetrisBack_8c.html#a290357fd08dfcd5dba53b47bc4592a2f',1,'checkLine(GameInfo_t *data):&#160;tetrisBack.c']]],
+  ['choosegame_13',['chooseGame',['../view_8h.html#aab71a9fb04038dcdaa961b2ae38fc01b',1,'chooseGame(WindowGame *gameWindow):&#160;view.cc'],['../view_8cc.html#aab71a9fb04038dcdaa961b2ae38fc01b',1,'chooseGame(WindowGame *gameWindow):&#160;view.cc']]],
+  ['clearcurrshape_14',['clearCurrShape',['../tetrisBack_8c.html#ad3a8ca0fa24cde0a65681f689abcf0a4',1,'clearCurrShape(Figure figure, GameInfo_t *GameField):&#160;tetrisBack.c'],['../tetrisBack_8h.html#ad3a8ca0fa24cde0a65681f689abcf0a4',1,'clearCurrShape(Figure figure, GameInfo_t *GameField):&#160;tetrisBack.c']]],
+  ['color_15',['color',['../structFigure.html#a2f104ffa6cc4bee62130bc8d4c226999',1,'Figure']]],
+  ['color_5fblack_16',['COLOR_BLACK',['../defines_8h.html#aba2a7fe77a7501e5844370eec0185207',1,'defines.h']]],
+  ['color_5fblue_17',['COLOR_BLUE',['../defines_8h.html#a23c70d699a5a775bc2e1ebeb8603f630',1,'defines.h']]],
+  ['color_5fcyan_18',['COLOR_CYAN',['../defines_8h.html#a82573859711fce56f1aa0a76b18a9b18',1,'defines.h']]],
+  ['color_5fgreen_19',['COLOR_GREEN',['../defines_8h.html#afc9149f5de51bd9ac4f5ebbfa153f018',1,'defines.h']]],
+  ['color_5fmagenta_20',['COLOR_MAGENTA',['../defines_8h.html#a8deb0beccea721b35bdb1b4f7264fe75',1,'defines.h']]],
+  ['color_5fred_21',['COLOR_RED',['../defines_8h.html#ad86358bf19927183dd7b4ae215a29731',1,'defines.h']]],
+  ['color_5fwhite_22',['COLOR_WHITE',['../defines_8h.html#a9b44987ffdc2af19b635206b94334b69',1,'defines.h']]],
+  ['color_5fyellow_23',['COLOR_YELLOW',['../defines_8h.html#a4534b577b74a58b0f4b7be027af664e0',1,'defines.h']]],
+  ['controller_2ecc_24',['controller.cc',['../controller_8cc.html',1,'']]],
+  ['controller_2eh_25',['controller.h',['../controller_8h.html',1,'']]],
+  ['controllerqt_26',['ControllerQt',['../classs21_1_1ControllerQt.html#ac5457038310e4398ba08fed207dfa3cb',1,'s21::ControllerQt::ControllerQt()'],['../classs21_1_1ControllerQt.html',1,'s21::ControllerQt']]],
+  ['controllerqt_2ecc_27',['controllerQt.cc',['../controllerQt_8cc.html',1,'']]],
+  ['controllerqt_2eh_28',['controllerQt.h',['../controllerQt_8h.html',1,'']]],
+  ['copyshape_29',['copyShape',['../tetrisBack_8h.html#ab7e836a78f834d7c13e3986fbfc087af',1,'copyShape(Figure *next, Figure *current):&#160;tetrisBack.c'],['../tetrisBack_8c.html#ab7e836a78f834d7c13e3986fbfc087af',1,'copyShape(Figure *next, Figure *current):&#160;tetrisBack.c']]],
+  ['count_5fiteration_30',['COUNT_ITERATION',['../defines_8h.html#ae921ad5f47017a6392bdb746f421cb37',1,'defines.h']]]
+];

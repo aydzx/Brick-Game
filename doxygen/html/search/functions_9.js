@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['paintevent_221',['paintEvent',['../classs21_1_1ViewQt.html#a05a882890920e8671dd2a54a907ea41d',1,'s21::ViewQt']]],
+  ['placeshapeonfield_222',['placeShapeOnField',['../tetrisBack_8h.html#a0fe4cc48d5a58fa9892d58c8742e52d4',1,'placeShapeOnField(Figure figure, GameInfo_t *GameField):&#160;tetrisBack.c'],['../tetrisBack_8c.html#a0fe4cc48d5a58fa9892d58c8742e52d4',1,'placeShapeOnField(Figure figure, GameInfo_t *GameField):&#160;tetrisBack.c']]],
+  ['printfield_223',['printField',['../view_8cc.html#adb411871d3adbd353cf7f2b6719158b8',1,'printField(WINDOW *GameWindow, GameInfo_t *data):&#160;view.cc'],['../view_8h.html#adb411871d3adbd353cf7f2b6719158b8',1,'printField(WINDOW *GameWindow, GameInfo_t *data):&#160;view.cc']]],
+  ['printgamefield_224',['printGameField',['../view_8cc.html#aa1ab222b65dfb79d869c9cf9c9353612',1,'printGameField(WindowGame *gameWindow, GameInfo_t *data, GameState state):&#160;view.cc'],['../view_8h.html#aa1ab222b65dfb79d869c9cf9c9353612',1,'printGameField(WindowGame *gameWindow, GameInfo_t *data, GameState state):&#160;view.cc']]],
+  ['printgameover_225',['printGameOver',['../view_8cc.html#a3b88adef14f78dbdae306ef46bdc6548',1,'printGameOver(WINDOW *GameWindow):&#160;view.cc'],['../view_8h.html#a3b88adef14f78dbdae306ef46bdc6548',1,'printGameOver(WINDOW *GameWindow):&#160;view.cc']]],
+  ['printinfo_226',['printInfo',['../classs21_1_1ViewQt.html#a0383241a5c73b7f2df25938a9962e797',1,'s21::ViewQt::printInfo()'],['../view_8h.html#ab6901a1790632f72bc93bd66c2eb5b5f',1,'printInfo(WINDOW *GameScore, GameInfo_t *data):&#160;view.cc'],['../view_8cc.html#ab6901a1790632f72bc93bd66c2eb5b5f',1,'printInfo(WINDOW *GameScore, GameInfo_t *data):&#160;view.cc']]],
+  ['printmenu_227',['printMenu',['../view_8cc.html#a5fb0783f367baa662d009acba60c31fa',1,'printMenu(WINDOW *GameWindow):&#160;view.cc'],['../view_8h.html#a5fb0783f367baa662d009acba60c31fa',1,'printMenu(WINDOW *GameWindow):&#160;view.cc']]],
+  ['printnextfigure_228',['printNextFigure',['../view_8cc.html#ada92cbd6818dd806b5a5c8cc823f4b9e',1,'printNextFigure(WINDOW *NextFigure, GameInfo_t *data):&#160;view.cc'],['../view_8h.html#ada92cbd6818dd806b5a5c8cc823f4b9e',1,'printNextFigure(WINDOW *NextFigure, GameInfo_t *data):&#160;view.cc']]],
+  ['printpause_229',['printPause',['../view_8cc.html#a820ce88ded0c5724851b0a9b1167313e',1,'printPause(WINDOW *GameScore):&#160;view.cc'],['../view_8h.html#a820ce88ded0c5724851b0a9b1167313e',1,'printPause(WINDOW *GameScore):&#160;view.cc']]]
+];

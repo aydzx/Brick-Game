@@ -92,7 +92,7 @@ void s21::ViewQt::keyPressEvent(QKeyEvent *event) {
 }
 
 void s21::ViewQt::choosGame(QPainter *painter) {
-  QFont font("Arial", 12);  // Set the font family and size
+  QFont font("Arial");  // Set the font family and size
   font.setPixelSize(17);
   painter->setFont(font);
   painter->drawText(2 * PIXEL, 8 * PIXEL, "CHOOSE A GAME");

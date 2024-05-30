@@ -251,10 +251,12 @@ void s21::Model::gameOver() {
     writeToFile();
     game_info_.state = GameState::EXIT_STATE;
   } else if (game_info_.action == START) {
+    writeToFile();
     initGame();
     game_info_.state = SPAWN;
   }
 }
+
 s21::Model::Model() { game_info_.state = MENU; }
 
 s21::Model::~Model() { writeToFile(); }
