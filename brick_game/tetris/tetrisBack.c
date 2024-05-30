@@ -1,32 +1,33 @@
 #include "library/tetris.h"
 
 void updateCurrentState(GameInfo_t* data) {
-   if (data->state == SHIFTING && data->state != STOP) {
-      if(data->action == ACTION || data->action == DOWN || data->action == LEFT || data->action == RIGHT) {
-       data->state = MOVING;
-   }
-   }
-if(data->action == TERMINATE) {
-  data->state = EXIT_STATE;
-}
+  if (data->state == SHIFTING && data->state != STOP) {
+    if (data->action == ACTION || data->action == DOWN ||
+        data->action == LEFT || data->action == RIGHT) {
+      data->state = MOVING;
+    }
+  }
+  if (data->action == TERMINATE) {
+    data->state = EXIT_STATE;
+  }
 
   if (data->state == MENU) {
     actionStart(data);
   } else if (data->state == SPAWN) {
     spawnShape(data);
-  } else if (data->state == MOVING ) {
+  } else if (data->state == MOVING) {
     moving(data);
-  } else if (data->state == SHIFTING){
+  } else if (data->state == SHIFTING) {
     shifting(data);
-  }else if (data->state == ATTACHING) {
+  } else if (data->state == ATTACHING) {
     attaching(data);
   } else if (data->state == GAME_OVER) {
     gameOver(data);
-  }else if (data->state == STOP) {
+  } else if (data->state == STOP) {
     actionPause(data);
   }
 
- data->action = NOSIG;
+  data->action = NOSIG;
 }
 
 void initGameField(GameInfo_t* GameField) {
@@ -52,11 +53,12 @@ void InitCurrFigure(Figure* figure) {
   figure->position.x = 3;
 
   // int type = (TypeFigure)(rand() % NUMBER_OF_FIGURES);
- figure->typefigure = (rand() % NUMBER_OF_FIGURES);
- figure->color = 1 + rand() % NUMBER_OF_FIGURES;
- 
+  figure->typefigure = (rand() % NUMBER_OF_FIGURES);
+  figure->color = 1 + rand() % NUMBER_OF_FIGURES;
+
   for (int pixel = 0; pixel < 4; pixel++) {
-    figure->pixels[pixel].x = figures[figure->typefigure][pixel][0] + figure->position.x;
+    figure->pixels[pixel].x =
+        figures[figure->typefigure][pixel][0] + figure->position.x;
     figure->pixels[pixel].y = figures[figure->typefigure][pixel][1];
   }
 }
@@ -201,8 +203,7 @@ int checkLine(GameInfo_t* data) {
   int x = 0;
   int Score = 0;
   for (int y = 0; y < HEIGHT; y++) {
-    for (x = 0; x < WIDTH && data->field[y][x]; x++)
-      ;
+    for (x = 0; x < WIDTH && data->field[y][x]; x++);
     if (x == 10) {
       removeLine(data, y);
       Score = Score * 2 + 100;
@@ -235,27 +236,25 @@ void spawnShape(GameInfo_t* data) {
 }
 
 void actionStart(GameInfo_t* data) {
-  
   if (data->action == START) {
     initGameField(data);
     data->state = SPAWN;
-
-   
   }
 }
 
 void shifting(GameInfo_t* data) {
   static int time_for_shifting_ = 0;
-  if (time_for_shifting_ > 11 - data->speed) {  // изменение скорости меняет вызов moveDown на 50 миллисекунд
+  if (time_for_shifting_ >
+      11 - data->speed) {  // изменение скорости меняет вызов moveDown на 50
+                           // миллисекунд
     moveDown(data);
     time_for_shifting_ = 0;
   }
-  if(data->action == PAUSE  ) {
-  data->state = STOP;
-}
-     
+  if (data->action == PAUSE) {
+    data->state = STOP;
+  }
 
-     time_for_shifting_++;
+  time_for_shifting_++;
 }
 
 void attaching(GameInfo_t* data) {
@@ -265,7 +264,7 @@ void attaching(GameInfo_t* data) {
     data->high_score = data->score;
   }
   data->level = data->score / levelThreshold +
-                          1;  // +1 , чтобы уровень не начинался с нуля
+                1;  // +1 , чтобы уровень не начинался с нуля
   if (data->level > MAXLEVEL) {
     data->level = MAXLEVEL;
   }
@@ -324,7 +323,7 @@ int readMaxScore() {
     while ((ch = fgetc(file)) != EOF) {
       maxScore = maxScore * 10 + (ch - '0');
     }
-  fclose(file);
+    fclose(file);
   }
   return maxScore;
 }
@@ -335,7 +334,6 @@ void writeMaxScore(int maxScore) {
     fprintf(file, "%d", maxScore);
     fclose(file);
   }
-
 }
 
 int checkingTopLine(GameInfo_t* data) {
@@ -348,15 +346,13 @@ int checkingTopLine(GameInfo_t* data) {
   return check;
 }
 
-
-
 void gameOver(GameInfo_t* data) {
   writeMaxScore(data->high_score);
   actionStart(data);
 }
 
-void actionPause(GameInfo_t* data){
-    if(data->action == PAUSE) {
-      data->state = SHIFTING;
-    }
+void actionPause(GameInfo_t* data) {
+  if (data->action == PAUSE) {
+    data->state = SHIFTING;
+  }
 }

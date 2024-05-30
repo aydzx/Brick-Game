@@ -3,16 +3,16 @@
 
 #include <locale.h>
 #include <ncurses.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include <sys/time.h>
+#include <time.h>
 
-#include "defines.h"
 #include "../../../gui/console/controller/controller.h"
+#include "../../../gui/console/view.h"
+#include "defines.h"
 #include "objects.h"
 #include "tetrisBack.h"
-#include "../../../gui/console/view.h"
 
 #endif
